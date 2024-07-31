@@ -9,7 +9,7 @@ class Animal(str, Enum):
     lion = "lion"
     tiger = "tiger"
 
-@lysapp.get("/animals{animal_name}")
+@lysapp.get("/animals/{animal_name}")
 async def getanimal(animal: Animal):
     # 열거형 멤버 비교
     if animal == Animal.cat:
